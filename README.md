@@ -1,6 +1,6 @@
 # govsm
 
-Gerenciador de versões do Go em Bash.
+Gerenciador de versões do Go.
 
 ## Instalação
 

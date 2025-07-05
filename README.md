@@ -1,38 +1,38 @@
 # govsm
 
-Gerenciador de versões do Go.
+Go version manager.
 
-## Instalação
+## Installation
 
-Com o `make` instalado, execute:
+With `make` installed, run:
 
 ```bash
 make install
 ```
 
-O script `govsm` será copiado para `/usr/local/bin`. Para instalar em outro local, utilize a variável `PREFIX`:
+The `govsm` script will be copied to `/usr/local/bin`. To install elsewhere, use the `PREFIX` variable:
 
 ```bash
 make install PREFIX=$HOME/.local/bin
 ```
 
-## Uso
+## Usage
 
-Liste as versões disponíveis:
+List available versions:
 
 ```bash
 govsm list
 ```
 
-Instale uma versão específica do Go:
+Install a specific Go version:
 
 ```bash
 govsm install 1.22.0
 ```
 
-Execute `govsm` sem parâmetros para ver a ajuda completa.
+Run `govsm` without arguments to see the full help.
 
-## Requisitos
+## Requirements
 
-- `curl` e `wget` instalados
-- Permissão para escrever no diretório de instalação
+- `curl` and `wget` installed
+- Permission to write to the installation directory

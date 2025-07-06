@@ -2,6 +2,9 @@
 
 Go version manager.
 
+The `govsm` script automatically detects your operating system (Linux or macOS)
+and CPU architecture when downloading Go releases.
+
 ## Installation
 
 With `make` installed, run:
@@ -36,3 +39,4 @@ Run `govsm` without arguments to see the full help.
 
 - `curl` and `wget` installed
 - Permission to write to the installation directory
+- Works on Linux and macOS (architecture detected automatically)

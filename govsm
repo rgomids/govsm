@@ -1,7 +1,34 @@
 #!/bin/bash
 
 INSTALL_DIR="/usr/local"
-GO_ARCH="linux-amd64"
+
+# Detect operating system and architecture
+detect_go_arch() {
+    local os=$(uname -s)
+    local arch=$(uname -m)
+
+    case "$os" in
+        Linux*)  os="linux" ;;
+        Darwin*) os="darwin" ;;
+        *)
+            echo "Unsupported OS: $os"
+            exit 1
+            ;;
+    esac
+
+    case "$arch" in
+        x86_64|amd64) arch="amd64" ;;
+        arm64|aarch64) arch="arm64" ;;
+        *)
+            echo "Unsupported architecture: $arch"
+            exit 1
+            ;;
+    esac
+
+    echo "${os}-${arch}"
+}
+
+GO_ARCH="$(detect_go_arch)"
 
 list_versions() {
     echo "🔍 Fetching available versions..."
